@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-export default class Navbar extends Component {
+import { Link } from 'react-router-dom';
+import { Login, Signup } from './';
+class Navbar extends Component {
   render() {
     return (
       <nav className="nav">
@@ -47,7 +48,15 @@ export default class Navbar extends Component {
           </div>{' '}
           <div className="nav-links">
             <ul>
-              <li> Log in </li> <li> Log out </li> <li> Register </li>{' '}
+              <li>
+                <Link to="/login">log in </Link>{' '}
+              </li>
+              <li>
+                <Link to="/logout">Log out</Link>{' '}
+              </li>
+              <li>
+                <Link to="/Signup"> Register </Link>
+              </li>{' '}
             </ul>{' '}
           </div>{' '}
         </div>{' '}
@@ -55,3 +64,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default Navbar;
